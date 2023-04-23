@@ -8,9 +8,17 @@ class GameService {
   }
 
   public showPlayers = (): void => {
-    this.playersArr.forEach(element => {
-      console.log(element)
+    const players = this.createPlayers()
+    players.forEach(player => console.log(player))
+  }
+
+  private createPlayers = (): Player[] => {
+    const players: Player[] = []
+    this.playersArr.forEach(playerName => {
+      const player = new Player(playerName)
+      players.push(player)
     })
+    return players
   }
 }
 
