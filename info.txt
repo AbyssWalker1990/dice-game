@@ -1,0 +1,15 @@
+In this game can play many peoples without limit and we can choose how many dices will be used.
+All players threw dices in 1 round, and after it game shows result and detecting champion(s) with
+the biggest result. If champion is single - game returns congratulations and show result, otherwise -
+started second round with only champions from previous and so on ...
+
+Nouns: Dice, Player,
+
+Dice:
+    sides: number
+
+Player:
+    name: string
+    isChampion: boolean
+    result: number
+    round: number
